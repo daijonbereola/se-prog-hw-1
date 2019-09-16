@@ -1,0 +1,31 @@
+requirements:
+ - no words should pass right margin
+ - words should start past left margin
+ - word = any sequence of non-blank characters
+ - 1 blank b/w words, 2 blanks b/w sentences
+ - output name = "DAT1.txt"
+ - input = filename (str)
+ - lm (int)
+ - rm (int)
+ 
+assumptions:
+ - 1 line = 80 characters
+ - 1 marginal indent (inch) = 6 blank space char
+ - left and right margin are positive integers
+ - output is 1 paragraph
+ - total margin length < line length
+ 
+algorithm:
+ - declare line length
+ - declare in margin length
+ - open file (input)
+ - open output file ("DAT1.txt")
+ - get margin integers
+ - calculate remaining line length, given margins
+ - read in words from input file
+ - store words in list
+ - for words in list
+   - add word to formatted string
+   - subtract word length from line length
+   - move runoff words to next line
+ - close both files
